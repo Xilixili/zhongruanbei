@@ -1,0 +1,57 @@
+h6
+{
+	color:#128bed;
+}
+
+.name a:link,.name a:visited
+{
+	color:#128bed;
+	text-decoration:none;
+}
+
+.name a:hover,.name a:active
+{
+	color:#128bed;
+	text-decoration:none;
+}
+
+#bbt
+{
+	width:300px;
+	font-size:14px;
+	letter-spacing:3px;
+}
+
+.information
+{
+	margin-top:30px;
+	width:300px;
+}
+
+.ntable
+{
+	border-collapse: collapse;
+	height:150px;
+	margin-top: 30px;
+	color:#000;
+	text-align: center;	
+	font-size: 13px;
+}
+
+
+.ntable td
+{
+	height:10px;
+	border:1px solid #DDD;
+}
+
+.tb
+{
+	background-color:#F2F9FC;
+	color:#808080;
+}
+
+#box-t
+{
+	width:350px;
+}

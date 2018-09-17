@@ -1,0 +1,139 @@
+*
+{
+	margin:0;
+	padding:0;
+	font-size:15px;
+}
+body
+{
+	background-color:#f3f3f3;
+	overflow:-Scroll;overflow-x:hidden
+}
+
+.naver
+{
+	position:relative;
+	margin:0;
+	background-color:#293c55;
+	height:60px;
+}
+
+
+.fanhui
+{
+	float:right;
+	margin-right: 30px;
+	line-height: 60px;
+	letter-spacing:2px;
+}
+
+.fanhui a:link,.fanhui a:visited
+{
+	color:#FFF;
+	text-decoration: none;
+}
+
+.fanhui a:hover,.fanhui a:active
+{
+	color:#777;
+	text-decoration: none;
+}
+
+.container
+{
+
+	margin:60px auto;
+	background-color:#fff;
+	box-shadow:4px 6px 8px #ccc;
+}
+
+.box-name p
+{
+    font-weight:bold;
+    letter-spacing: 2px;
+}
+
+.name-list
+{
+
+	height:1200px;
+}
+
+.name-list li
+{
+    height:135px;
+	border:solid 1px #ccc;
+	float:left;
+	margin-left: 30px;
+	margin-top: 20px;
+	list-style: none;
+    
+}
+
+.info-box
+{
+	height:135px;
+}
+.shb
+{
+	float:left;
+	height:135px;
+	width:200px;
+	line-height: 135px;
+}
+
+.shb img
+{
+	vertical-align: middle;
+	max-width: 200px;
+	max-height:130px;
+}
+
+.info
+{
+   width:45%;
+   height:110px;
+   float:right;
+   margin-top: 20px;
+}
+
+.info-list
+{
+	margin-right: 7%;
+	height:25%;
+
+}
+
+.info-a
+{
+	margin-top: 8px;
+	margin-right: 3%;
+	float:right;
+}
+
+.info-a a:link,.info-a a:visited
+{
+	color:	#4682B4 ;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+.info-a a:hover,.info-a a:active
+{
+	color:	#4682B4 ;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+.infostyle1
+{
+	font-size: 13px;
+	color:#646464;
+	letter-spacing: 0.5px;
+    
+}
+
+.infostyle2
+{
+	font-size:14px;
+}

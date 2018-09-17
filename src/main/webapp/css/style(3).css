@@ -1,0 +1,197 @@
+*{
+	margin:0;
+	padding:0;
+	font-size:15px;
+}
+
+body
+{
+  background-color:#F5F5F5;
+  overflow:-Scroll;overflow-x:hidden
+}
+
+h3
+{
+	font-weight: none;
+	color:#000;
+}
+
+em
+{
+	color:red;
+	font-style:normal;
+}
+
+
+.container
+{
+  position: relative;
+  margin:100px auto;
+  width:75%;
+  height:3000px;
+}
+
+.header
+{
+	position: relative;
+	height:42px;
+	width:100%;
+	margin-bottom: 5px;
+	background-color: #FFF;
+}
+
+.header li
+{
+	float:left;
+	width:14.186%;
+	height:40px;
+	line-height:40px;
+	border:1px solid #DDD;
+	border-right:0.5px #DDD;
+	list-style: none;
+	text-align: center;
+}
+
+.header a:link,.header a:visited
+{
+	color:#000;
+	text-decoration:none;
+}
+
+.header a:hover,.header a:active
+{
+	color:#009FCC;
+	text-decoration:none;
+	font-weight: bold;
+}
+
+.info
+{
+	position: relative;
+	width:100%;
+	height:5000px;
+	border:1px solid #DDD;
+	background-color: #FFF;
+}
+
+.info_head
+{
+	width:75%;
+	height:40px;
+	margin:20px auto;
+	line-height: 50px;
+	padding-left: 20px;
+}
+
+.ntable
+{
+	border-collapse: collapse;
+	width:77.5%;
+	height:200px;
+	margin:0 auto;
+	color:#000;
+	text-align: center;	
+}
+
+
+.ntable td
+{
+	padding:12px 10px 12px 10px;
+	border:1px solid #DDD;
+}
+
+.ntable a:link,.ntable a:visited
+{
+	text-decoration: none;
+	color:#003C9D;
+}
+
+.ntable a:hover,.natable a:active
+{
+	text-decoration: none;
+	color:#003C9D;
+}
+
+.box_td
+{
+	height:100%;
+	padding-left: 10px;
+}
+
+.clearfix
+{
+	height:50%;
+}
+
+.fix-left
+{
+	float:left
+}
+
+.fix-left img
+{
+	border-radius: 0.3em;
+}
+
+.fix-right
+{
+	padding-left: 15px;
+	float:left;
+}
+
+.fix-right a:link,.fix-right a:visited
+{
+	text-decoration: none;
+	color:#E63F00 ;
+}
+
+.fix-right a:hover,.fix-right a:active
+{
+	text-decoration: none;
+	color:#128bed;
+}
+
+.button
+{
+	margin-top: 30px;
+}
+
+.button a:link,.button a:visited
+{
+	text-decoration: none;
+	color:#FFF;
+}
+
+.button a:hover,.button a:active
+{
+	text-decoration: none;
+	color:#FFF;
+}
+
+.bt1
+{
+	font-size:15px;
+	color:#FFF;
+	width:98px;
+	height:32px;
+	background-color: #128bed;
+	border:5px solid #128bed;
+	border-radius: 0.3em;
+}
+
+.clearfix img
+{
+	float:left;
+}
+
+.tb
+{
+	background-color:#F2F9FC;
+}
+
+.text-grey
+{
+	font-size:12px;
+	color:#888;
+}
+

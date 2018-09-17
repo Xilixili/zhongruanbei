@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+    <!-- 默认访问页面 -->
+
+    <!-- 商品相关请求转发 -->
+    <!-- Struts2在2.5版本后添加strict-method-invocation(严格方法访问)，默认为true，不能使用动态方法调用功能，故需设为false -->
+    <package name="user" extends="struts-default" namespace="/" strict-method-invocation="false" >
+        <!-- 登陆 -->
+        <result-types>
+            <result-type name="json" class="org.apache.struts2.json.JSONResult"/>
+        </result-types>
+        <interceptors>
+            <interceptor name="json" class="org.apache.struts2.json.JSONInterceptor"/>
+        </interceptors>
+        <!-- 前面表示通配符，两个*分别对应后面的两个数字-->
+        <action name="*_*" class="com.hmz.action.{1}Action" method="{2}" >
+            <result name="success">/main1.jsp</result>
+            <result name="error">/error.jsp</result>
+            <result name="E">/error3.jsp</result>
+            <result name="E2">/error2.jsp</result>
+            <result name="11">/list2.jsp</result>
+
+            <result name="querySuccess">/user.jsp</result>
+
+            <result name="delete_success" type="chain">User_queryList</result>
+            <!--<result name="queryListSuccess" >/List.jsp</result>-->
+            <result name="add_success">/index.jsp</result>
+            <result name="update_success" type="chain">User_queryList</result>
+            <result name="out_success" >/index.jsp</result>
+            <result name="1">/list1.jsp</result>
+            <result name="fail">/index.jsp</result>
+            <result name="changeXinxi_success">/user.jsp</result>
+            <!--demoo.jsp失败后跳转的登陆注册界面-->
+            <!--<result name="1" type="plainText">-->
+            <!--<param name="charSet">UTF-8</param>-->
+            <!--<param name="location">/test.jsp</param>-->
+            <!--</result>-->
+            <!--<result name="fail" type="json">-->
+                <!--<param name="root">result</param>-->
+            <!--</result>-->
+        </action>
+    </package>
+</struts>

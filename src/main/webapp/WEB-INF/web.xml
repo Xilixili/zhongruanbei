@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <display-name>GtJavaSdkDemo</display-name>
+    <servlet>
+        <servlet-name>StartCaptchaServlet1</servlet-name>
+        <display-name>StartCaptchaServlet1</display-name>
+        <description></description>
+        <servlet-class>com.lei.servlet.StartCaptchaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VerifyLoginServlet1</servlet-name>
+        <display-name>VerifyLoginServlet1</display-name>
+        <description></description>
+        <servlet-class>com.lei.servlet.VerifyLoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StartCaptchaServlet2</servlet-name>
+        <display-name>StartCaptchaServlet2</display-name>
+        <description></description>
+        <servlet-class>com.lei.servlet.StartCaptchaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VerifyLoginServlet2</servlet-name>
+        <display-name>VerifyLoginServlet2</display-name>
+        <description></description>
+        <servlet-class>com.lei.servlet.VerifyLoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>servletdao</servlet-name>
+        <url-pattern>/servletdao.servlet</url-pattern> <!-- MyServlet.hello 也是可以的 -->
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>VerifyLoginServlet1</servlet-name>
+        <url-pattern>/gt/ajax-validate1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StartCaptchaServlet1</servlet-name>
+        <url-pattern>/gt/register1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerifyLoginServlet2</servlet-name>
+        <url-pattern>/gt/ajax-validate2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StartCaptchaServlet2</servlet-name>
+        <url-pattern>/gt/register2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>servletdao</servlet-name>
+        <servlet-class>com.hmz.servlet.servletdao</servlet-class>
+    </servlet>
+
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+
+  <!-- 配置Struts2过滤器 -->
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+
+    <!--<filter-mapping>-->
+        <!--<filter-name>struts2</filter-name>-->
+        <!--<url-pattern>*.servlet</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--<filter-mapping>-->
+        <!--<filter-name>struts2</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>Servlet</servlet-name>-->
+        <!--<url-pattern>/MyServlet.servlet</url-pattern> &lt;!&ndash; MyServlet.hello 也是可以的 &ndash;&gt;-->
+    <!--</servlet-mapping>-->
+//拦截后取找struts.xml文件
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>*.action</url-pattern>
+    </filter-mapping>
+
+    <!--这里规定了接受的路径后缀-->
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+
+  <!-- 配置Spring的监听器 -->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <!-- 指定Spring配置文件所在路径 -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+</web-app>

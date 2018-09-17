@@ -1,0 +1,149 @@
+*
+{
+	margin:0;
+	padding:0;
+	font-size:15px;
+}
+body
+{
+	background-color:#f3f3f3;
+	overflow:-Scroll;overflow-x:hidden
+}
+
+.information
+{
+	position:relative;
+	width:900px;
+	margin:50 auto;
+	margin-bottom: 100px;
+}
+
+section
+{
+	padding:0;
+}
+
+
+.info_table
+{
+	width:100%;
+	margin:30px auto;
+	border:2px solid #DDD;
+
+}
+
+.info_table tr
+{
+	border-top:#DDD solid 1px;
+	line-height:30px;
+}
+
+a
+{
+	padding-left: 5px;
+}
+
+a:link,a:visited
+{
+	text-decoration: none;
+	color:#2fa0ec;
+}
+
+a:hover,a:active
+{
+	text-decoration: none;
+	color:#2fa0ec;
+}
+
+.info_table p
+{
+	margin:0px;
+	padding-left: 5px;
+}
+
+.info_table img
+{
+	margin-right:30px;
+}
+
+.info_table tbody tr:hover
+{
+	background-color: #F5F5F5;
+}
+
+.info_table img
+{
+	margin-bottom: 0.4px;
+}
+
+.info_table span
+{
+	margin-left: 5px;
+}
+
+.info_table em
+{
+	color:#FF0000;
+	font-weight:bold;
+	font-style:normal;
+}
+.naver
+{
+	position:relative;
+	margin:0;
+	background-color:#293c55;
+	height:60px;
+}
+
+.shibai
+{
+	position:relative;
+	width:700px;
+	height:200px;
+	margin:50px auto;
+	margin-bottom:0;
+}
+
+.letter
+{
+	height:70px;
+	float:left;
+	margin-top:50px;
+	line-height: 50px;
+}
+
+.img
+{
+	float:left;
+}
+
+#inputPassword2
+{
+	width:418px;
+}
+
+#bttt
+{
+	background-color:#777;
+	border:none;
+}
+
+.fanhui
+{
+	float:right;
+	margin-right: 30px;
+	line-height: 60px;
+	letter-spacing:2px;
+}
+
+.fanhui a:link,.fanhui a:visited
+{
+	color:#FFF;
+	text-decoration: none;
+}
+
+.fanhui a:hover,.fanhui a:active
+{
+	color:#777;
+	text-decoration: none;
+}

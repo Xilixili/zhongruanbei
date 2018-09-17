@@ -1,0 +1,336 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>mavenSSH</groupId>
+  <artifactId>mavenSSH</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>mavenSSH Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <scala.version>2.11.4</scala.version>
+    <hadoop.version>2.9.0</hadoop.version>
+    <!-- 统一源码的编码方式 -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- 统一各个框架版本 -->
+    <struts.version>2.5.10</struts.version>
+    <spring.version>4.3.8.RELEASE</spring.version>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>scala-tools.org</id>
+      <name>Scala-Tools Maven2 Repository</name>
+      <url>http://scala-tools.org/repo-releases</url>
+    </repository>
+
+
+    <repository>
+      <id>SparkPackagesRepo</id>
+      <url>http://dl.bintray.com/spark-packages/maven</url>
+    </repository>
+
+    <repository>
+      <id>Apache Releases Repository</id>
+      <url>https://repository.apache.org/content/repositories/releases/</url>
+    </repository>
+
+    <repository>
+      <id>Cloudera Repository</id>
+      <url>https://repository.cloudera.com/content/repositories/releases/</url>
+    </repository>
+
+
+    <repository>
+      <id>Clojars Repository</id>
+      <url>http://clojars.org/repo/</url>
+    </repository>
+
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>scala-tools.org</id>
+      <name>Scala-Tools Maven2 Repository</name>
+      <url>http://scala-tools.org/repo-releases</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <dependencies>
+
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
+
+
+    <!--<dependency>-->
+      <!--<groupId>org.nutz</groupId>-->
+      <!--<artifactId>nutz</artifactId>-->
+      <!--<version>1.r.60</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>com.alibaba</groupId>-->
+      <!--<artifactId>druid</artifactId>-->
+      <!--<version>1.0.26</version>-->
+      <!--<exclusions>-->
+        <!--<exclusion>-->
+          <!--<artifactId>jconsole</artifactId>-->
+          <!--<groupId>com.alibaba</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<artifactId>tools</artifactId>-->
+          <!--<groupId>com.alibaba</groupId>-->
+        <!--</exclusion>-->
+      <!--</exclusions>-->
+    <!--</dependency>-->
+    <!-- https://mvnrepository.com/artifact/com.sun.jna/jna -->
+    <dependency>
+      <groupId>com.sun.jna</groupId>
+      <artifactId>jna</artifactId>
+      <version>3.0.9</version>
+    </dependency>
+
+
+
+
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+    <!--<dependency>-->
+      <!--<groupId>org.apache.httpcomponents</groupId>-->
+      <!--<artifactId>httpclient</artifactId>-->
+      <!--<version>4.5.4</version>-->
+    <!--</dependency>-->
+
+    <!--<dependency>-->
+      <!--<groupId>Huawei-Spark</groupId>-->
+      <!--<artifactId>Spark-SQL-on-HBase</artifactId>-->
+      <!--<version>1.0.0</version>-->
+      <!--<exclusions>-->
+        <!--<exclusion>-->
+          <!--<artifactId>jersey-core</artifactId>-->
+          <!--<groupId>com.sun.jersey</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<artifactId>jersey-json</artifactId>-->
+          <!--<groupId>com.sun.jersey</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<artifactId>jersey-server</artifactId>-->
+          <!--<groupId>com.sun.jersey</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<artifactId>jackson-annotations</artifactId>-->
+          <!--<groupId>com.fasterxml.jackson.core</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<artifactId>jackson-core</artifactId>-->
+          <!--<groupId>com.fasterxml.jackson.core</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<artifactId>jackson-databind</artifactId>-->
+          <!--<groupId>com.fasterxml.jackson.core</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<artifactId>guava</artifactId>-->
+          <!--<groupId>com.google.guava</groupId>-->
+        <!--</exclusion>-->
+      <!--</exclusions>-->
+    <!--</dependency>-->
+
+
+
+
+
+    <!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
+    <!--<dependency>-->
+      <!--<groupId>net.sf.json-lib</groupId>-->
+      <!--<artifactId>json-lib</artifactId>-->
+      <!--<version>2.4</version>-->
+    <!--</dependency>-->
+
+
+
+    <!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+    <!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+
+
+    <!-- https://mvnrepository.com/artifact/commons-collections/commons-collections -->
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <version>3.2.1</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpcore</artifactId>
+      <version>4.4.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.1</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>2.6</version>
+    </dependency>
+
+       https://mvnrepository.com/artifact/net.sf.ezmorph/ezmorph
+    <dependency>
+      <groupId>net.sf.ezmorph</groupId>
+      <artifactId>ezmorph</artifactId>
+      <version>1.0.6</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+
+    <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.2.4</version>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/com.metamx/java-util -->
+    <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>java-util</artifactId>
+      <version>1.3.2</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>jackson-annotations</artifactId>
+          <groupId>com.fasterxml.jackson.core</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/net.sf.ezmorph/ezmorph -->
+    <!-- https://mvnrepository.com/artifact/net.alchim31.maven/scala-maven-plugin -->
+    <dependency>
+      <groupId>net.alchim31.maven</groupId>
+      <artifactId>scala-maven-plugin</artifactId>
+      <version>3.1.3</version>
+    </dependency>
+
+    hanlp分词平台
+    <dependency>
+      <groupId>com.hankcs</groupId>
+      <artifactId>hanlp</artifactId>
+      <version>portable-1.2.8</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
+    <!--一定要加jdk15-->
+    <dependency>
+      <groupId>net.sf.json-lib</groupId>
+      <artifactId>json-lib</artifactId>
+      <version>2.4</version>
+      <classifier>jdk15</classifier>
+    </dependency>
+
+
+
+    <!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-json-plugin -->
+    <!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-json-plugin -->
+    <!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-json-plugin -->
+    <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-json-plugin</artifactId>
+      <version>2.5.16</version>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
+
+
+    <!-- Junit依赖 -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- Spring 核心依赖 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!-- Spring web依赖 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!-- Spring整合ORM框架依赖 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!-- Struts2 核心依赖 -->
+    <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-core</artifactId>
+      <version>${struts.version}</version>
+    </dependency>
+    <!-- Struts2和Spring整合依赖 -->
+    <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-spring-plugin</artifactId>
+      <version>${struts.version}</version>
+    </dependency>
+    <!-- Hibernate 核心依赖 -->
+    <!-- hibernate -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>4.2.0.Final</version>
+    </dependency>
+
+
+    <!-- C3P0 依赖 -->
+    <dependency>
+      <groupId>com.mchange</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>0.9.5</version>
+    </dependency>
+    <!-- AspectJ依赖 -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.8.10</version>
+    </dependency>
+    <!-- SLF4J依赖 -->
+    <!-- <dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-log4j12</artifactId>
+       <version>1.7.25</version>
+     </dependency>-->
+  </dependencies>
+  <build>
+    <finalName>mavenSSH</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>6</source>
+          <target>6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+
+  </build>
+</project>

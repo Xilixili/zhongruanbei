@@ -1,0 +1,35 @@
+.mb-3
+{
+	width:650px;
+	margin:50px auto;
+}
+
+
+
+.nav-pills .nav-link.active
+{
+	color:#FFF;
+	background-color: #128bed;
+}
+
+.nav a
+{
+	color:#000;
+}
+
+.modal-body
+{
+	width:900px;
+}
+
+.form-control
+{
+	width:450px;
+}
+
+.form-group input
+{
+	height:200px;
+	line-height:20px;
+}
+
